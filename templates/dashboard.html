@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tile Tracker Alerts Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}" type="text/css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>Current Alerts</h2>
+        <ul id="alerts">
+            <!-- Tasks will be populated here -->
+            <li>Task 1: Example task description</li>
+            <li>Task 2: Another task description</li>
+            {% for alert in alerts %}
+            {% if alert[6]%}
+            <li>{{ alert[1] }} &#9989</li>
+            {% else %}
+            <li>{{ alert[1] }} &%10071</li>
+            {% endif %}
+            {% endfor %}
+            <!-- Add more tasks dynamically if needed -->
+        </ul>
+    </div>
+    <embed style="overflow: visible" type="text/html" src="static/map.html" width="100% height="auto">
+    <div class="dashboard">
+
+        <header>
+            <h1>Tile Tracker Alerts Dashboard</h1>
+        </header>
+        <section class="new-alert">
+            <h2>Set Up New Alert</h2>
+            <form id="alert-form" action="/api/createAlert" method="POST">
+
+                <label for="device">Device Name:</label>
+                <select id="device" name="device" required>
+                    <option value="" disabled selected>Select a device</option>
+                    {% for device in devices %}
+                    <option value="{{ device.uuid }}">{{ device.name }}</option>
+                    {% endfor %}
+                </select>
+
+                <label for="alert-name">Alert Name:</label>
+                <input type="text" id="alert-name" name="alert-name" required>
+
+                <label for="distance">Distance (miles):</label>
+                <input type="number" min=0 id="distance" name="distance" required>
+
+                <label for="location">Location:</label>
+                <select id="location" name="location" required>
+                    <option value="" disabled selected>Select a location</option>
+                    {% for location in locations %}
+                    <option value="{{ location[0] }}" data-longitude="{{ location[2] }}"
+                        data-latitude="{{ location[3] }}">
+                        {{ location[1] }}
+                    </option>
+                    {% endfor %}
+                </select>
+
+                <br>
+
+                <button type="submit">Create Alert</button>
+            </form>
+        </section>
+        <section class="alerts-list">
+            <h2>Current Devices</h2>
+            <ul id="alerts">
+                {% for device in devices %}
+                <li value="{{ device.uuid }}">
+                    <strong>{{ device.name }}</strong><br>
+                    Longitude: {{ device.longitude }}<br>
+                    Latitude: {{ device.latitude }}<br>
+                    Last seen: {{ device.last_timestamp }}
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+    
+</body>
+
+</html>

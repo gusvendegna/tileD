@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display:flex
+}
+
+.dashboard {
+    max-width: 33%;
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    position: absolute;
+    right: 0
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.new-alert, .alerts-list {
+    margin-bottom: 20px;
+}
+
+.new-alert h2, .alerts-list h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.alerts-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.alerts-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #eee;
+    border-left: 4px solid #007BFF;
+}
+
+.skeleton {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    width: 100%;
+    height: 1.2em;
+    margin: 0.6em 0;
+    animation: pulse 0.75s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #c0c0c0;
+    }
+    50% {
+        background-color: #e2e2e2;
+    }
+    100% {
+        background-color: #c0c0c0;
+    }
+}
+
+/* Add this to your dashboard.css */
+
+/* Style the dropdown container */
+#device, #location {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+/* Style the selected option */
+#device option {
+    padding: 10px;
+}
+
+/* Add a hover effect for the dropdown */
+#device:hover, #location:hover {
+    border-color: #007bff;
+}
+
+/* Style the placeholder option */
+#device option:first-child {
+    color: #999;
+}
+
+.sidebar {
+    width: fit-content;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    overflow-y: auto;
+}

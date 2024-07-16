@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_37d19e3bcf72640fd2474cd6ec5247e3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_37d19e3bcf72640fd2474cd6ec5247e3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_37d19e3bcf72640fd2474cd6ec5247e3 = L.map(
+                "map_37d19e3bcf72640fd2474cd6ec5247e3",
+                {
+                    center: [39.45157890443943, -104.92517774968657],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_941bdd45e8711e59edcc36b68b722aae = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_941bdd45e8711e59edcc36b68b722aae.addTo(map_37d19e3bcf72640fd2474cd6ec5247e3);
+        
+    
+            var marker_311a206c90d641d5e20777984385950a = L.marker(
+                [39.561796, -105.016607],
+                {}
+            ).addTo(map_37d19e3bcf72640fd2474cd6ec5247e3);
+        
+    
+        var popup_46a2384d427882cfdee7f303c5ba5049 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2ad42029c84957dd1a99dce50fa8a7ba = $(`<div id="html_2ad42029c84957dd1a99dce50fa8a7ba" style="width: 100.0%; height: 100.0%;">Mt. Hood Meadows</div>`)[0];
+                popup_46a2384d427882cfdee7f303c5ba5049.setContent(html_2ad42029c84957dd1a99dce50fa8a7ba);
+            
+        
+
+        marker_311a206c90d641d5e20777984385950a.bindPopup(popup_46a2384d427882cfdee7f303c5ba5049)
+        ;
+
+        
+    
+    
+            marker_311a206c90d641d5e20777984385950a.bindTooltip(
+                `<div>
+                     Honda
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0ebc0142924ceab5cf1414c219d9fe00 = L.marker(
+                [39.561796, -105.016607],
+                {}
+            ).addTo(map_37d19e3bcf72640fd2474cd6ec5247e3);
+        
+    
+        var popup_83cd73cf007d93e9268c37291a6b2f29 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f6bbd13cf36f5f827fc9eb43cb363b4 = $(`<div id="html_3f6bbd13cf36f5f827fc9eb43cb363b4" style="width: 100.0%; height: 100.0%;">Mt. Hood Meadows</div>`)[0];
+                popup_83cd73cf007d93e9268c37291a6b2f29.setContent(html_3f6bbd13cf36f5f827fc9eb43cb363b4);
+            
+        
+
+        marker_0ebc0142924ceab5cf1414c219d9fe00.bindPopup(popup_83cd73cf007d93e9268c37291a6b2f29)
+        ;
+
+        
+    
+    
+            marker_0ebc0142924ceab5cf1414c219d9fe00.bindTooltip(
+                `<div>
+                     Subaru
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_343d1ceb539aae1786f66c7a878dd5c7 = L.marker(
+                [39.3416445, -104.8336059],
+                {}
+            ).addTo(map_37d19e3bcf72640fd2474cd6ec5247e3);
+        
+    
+        var popup_6cd81583295661ae702511a816c3be43 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a08d7d4366fcf2e4d1046f50d8a1e25 = $(`<div id="html_0a08d7d4366fcf2e4d1046f50d8a1e25" style="width: 100.0%; height: 100.0%;">Mt. Hood Meadows</div>`)[0];
+                popup_6cd81583295661ae702511a816c3be43.setContent(html_0a08d7d4366fcf2e4d1046f50d8a1e25);
+            
+        
+
+        marker_343d1ceb539aae1786f66c7a878dd5c7.bindPopup(popup_6cd81583295661ae702511a816c3be43)
+        ;
+
+        
+    
+    
+            marker_343d1ceb539aae1786f66c7a878dd5c7.bindTooltip(
+                `<div>
+                     moto g stylus 5G
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5a58da35183b48aefc7a5ef373d2187f = L.marker(
+                [39.34145173288659, -104.8336840374168],
+                {}
+            ).addTo(map_37d19e3bcf72640fd2474cd6ec5247e3);
+        
+    
+        var popup_26fe101612314382c9c56c3d9e1dca9f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4192dc5ca27f08542e24ccc0eb218bd2 = $(`<div id="html_4192dc5ca27f08542e24ccc0eb218bd2" style="width: 100.0%; height: 100.0%;">Mt. Hood Meadows</div>`)[0];
+                popup_26fe101612314382c9c56c3d9e1dca9f.setContent(html_4192dc5ca27f08542e24ccc0eb218bd2);
+            
+        
+
+        marker_5a58da35183b48aefc7a5ef373d2187f.bindPopup(popup_26fe101612314382c9c56c3d9e1dca9f)
+        ;
+
+        
+    
+    
+            marker_5a58da35183b48aefc7a5ef373d2187f.bindTooltip(
+                `<div>
+                     iPad
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c9d44bf6c059c22ece543f9a5cd5ff74 = L.marker(
+                [39.34130859375, -104.83393566070268],
+                {}
+            ).addTo(map_37d19e3bcf72640fd2474cd6ec5247e3);
+        
+    
+        var popup_5332957a659ec83642f570e8c3525bd3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6a7e11280aec4e4351c9740e518b0aac = $(`<div id="html_6a7e11280aec4e4351c9740e518b0aac" style="width: 100.0%; height: 100.0%;">Mt. Hood Meadows</div>`)[0];
+                popup_5332957a659ec83642f570e8c3525bd3.setContent(html_6a7e11280aec4e4351c9740e518b0aac);
+            
+        
+
+        marker_c9d44bf6c059c22ece543f9a5cd5ff74.bindPopup(popup_5332957a659ec83642f570e8c3525bd3)
+        ;
+
+        
+    
+    
+            marker_c9d44bf6c059c22ece543f9a5cd5ff74.bindTooltip(
+                `<div>
+                     sugnampad
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_954c31b092ffec60fa54b77ecb63d9d0 = L.marker(
+                [39.5614766, -105.0166269],
+                {}
+            ).addTo(map_37d19e3bcf72640fd2474cd6ec5247e3);
+        
+    
+        var popup_6586fd41e2447142a408aac86e643465 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_84a404009665286cdc9cc2b5e4f12619 = $(`<div id="html_84a404009665286cdc9cc2b5e4f12619" style="width: 100.0%; height: 100.0%;">Mt. Hood Meadows</div>`)[0];
+                popup_6586fd41e2447142a408aac86e643465.setContent(html_84a404009665286cdc9cc2b5e4f12619);
+            
+        
+
+        marker_954c31b092ffec60fa54b77ecb63d9d0.bindPopup(popup_6586fd41e2447142a408aac86e643465)
+        ;
+
+        
+    
+    
+            marker_954c31b092ffec60fa54b77ecb63d9d0.bindTooltip(
+                `<div>
+                     Galaxy A15 5G
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
