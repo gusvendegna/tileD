@@ -13,8 +13,9 @@
         <h2>Current Alerts</h2>
         <ul id="alerts">
             <!-- Tasks will be populated here -->
-            <li>Task 1: Example task description</li>
-            <li>Task 2: Another task description</li>
+            {% if (alerts == 0) %} 
+            {% endif %}
+            <p>no alerts yet. add some to get started!</p>
             {% for alert in alerts %}
             {% if alert[6]%}
             <li>{{ alert[1] }} &#9989</li>
@@ -24,6 +25,28 @@
             {% endfor %}
             <!-- Add more tasks dynamically if needed -->
         </ul>
+        <div class="addLocation">
+            <hr>
+            <h3>Add Location</h3>
+            <form action="/api/addLocation" method="POST">
+                <label for="name">Location Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="description">Description:</label>
+                <input type="string" id="description" name="description">
+
+                <label for="longitude">Longitude:</label>
+                <input type="number" step="any" id="longitude" name="longitude" required>
+
+                <label for="latitude">Latitude:</label>
+                <input type="number" step="any" id="latitude" name="latitude" required>
+
+                <br>
+                <button type="submit">Submit</button>
+                <br>
+            </form>
+            
+        </div>
     </div>
     <embed style="overflow: visible" type="text/html" src="static/map.html" width="100% height="auto">
     <div class="dashboard">
@@ -33,7 +56,7 @@
         </header>
         <section class="new-alert">
             <h2>Set Up New Alert</h2>
-            <form id="alert-form" action="/api/createAlert" method="POST">
+            <form id="alert-form" action=/api/createAlert method="POST">
 
                 <label for="device">Device Name:</label>
                 <select id="device" name="device" required>

@@ -136,3 +136,8 @@ form button:hover {
     height: 100vh;
     overflow-y: auto;
 }
+
+.addLocation {
+    position: absolute;
+    bottom: 0
+}
