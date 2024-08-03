@@ -14,7 +14,7 @@ This is a python program running in Flask. Should run on pretty much anything, a
 
 This application heavily relies on (and is inspired by) the [pytile](https://github.com/bachya/pytile) library. Shoutout to that guy for reverse engineering the Tile devices API. 
 
-I would have coded this in a real JS framework but I did not want to reverse engineer the pytile library. IDK anything about flask so bear with me. 
+I would have coded this in a real (JS) framework but I did not want to convert the pytile library. IDK anything about flask so bear with me. 
 
 ## Installation
 
