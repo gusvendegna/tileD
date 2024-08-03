@@ -1,5 +1,5 @@
 # tileD
-The self-hosted dashboard for managing your Tile trackers and Tile enabled devices
+The self-hosted dashboard for managing your Tile trackers and Tile enabled devices - tileD(ashboard)
 
 ## About
 Tile premium is $3/mo. If you're like me, that is WAYY too much money and you'd rather host something yourself on an old poweredge that idles at few hundred watts!
@@ -25,14 +25,14 @@ However, if someone wants to make me a DockerFile, please feel free. This is pro
 ```yaml
 services:
     tileD:
-        image: gusvendegna/tileD:latest
+        image: gusvendegna/tiled:latest
         ports:
-            - 8080:8080
+            - 5000:5000
         environment:
             - TILE_EMAIL=bob@gmail.com
             - TILE_PASSWORD=yourpassword
+            - DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/123123123123
 
-# eventually, you'll also put your notification integration (probably discord to start) keys here too
 ```
 
 Device location history is very much dependent on how long you have been running the application for. You can technically fetch this from tile to start, but that requires a premium subscription and that's kinda what I'm trying to avoid here. Importing this data in could be a future goal. of this project.
