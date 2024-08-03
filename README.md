@@ -18,9 +18,7 @@ I would have coded this in a real JS framework but I did not want to reverse eng
 
 ## Installation
 
-It will eventually be a docker container, but I'm not far enough into development to actually use this application day-to-day, so it lives as raw python files in my documents folder on my desktop. 
-
-However, if someone wants to make me a DockerFile, please feel free. This is probably what a ```docker-compose.yml``` will look like:
+Here's your docker compose:
 
 ```yaml
 services:
@@ -38,3 +36,6 @@ services:
 Device location history is very much dependent on how long you have been running the application for. You can technically fetch this from tile to start, but that requires a premium subscription and that's kinda what I'm trying to avoid here. Importing this data in could be a future goal. of this project.
 
 I will never prune any location information, personally, and probably will never add that into the app since it's only a few TEXT properties and you probably have a gig or two to spare. There is some client side caching and I am trying to avoiding storage of duplicate data but only god knows what is actually going on.
+
+
+[DockerHub  Link](https://hub.docker.com/r/gusvendegna/tiled)
