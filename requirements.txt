@@ -1,6 +1,10 @@
-flask==3.0.3
-sqlite3
+flask[async]==3.0.3
 asyncio
+folium
 aiohttp
 pytile
 schedule
+discord_webhook
+requests
+python-dotenv
+apscheduler
