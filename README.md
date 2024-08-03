@@ -4,7 +4,7 @@ The self-hosted dashboard for managing your Tile trackers and Tile enabled devic
 ## About
 Tile premium is $3/mo. If you're like me, that is WAYY too much money and you'd rather host something yourself on an old poweredge that idles at few hundred watts!
 
-tileD will allow for:
+tileD will allow (does allow?) for:
 - Unlimited custom alerts
 - Unlimited location history
 - Custom integrations for notifications
