@@ -30,7 +30,8 @@ def checkNotifications():
         lat_tol = change_in_latitude(alert[3])
         if (abs(alert[3]) + abs(long_tol) <= location[3] or abs(alert[4]) + abs(lat_tol) <= location[4]):
             # this one is fine
-            webhook = DiscordWebhook(url=DISCORD_WEBHOOK_URL, content='hello')
+            content = (f"ALERT. {alert[0]} has been triggered.\nPlease log into the TileD webapp to see your device on a map.")
+            webhook = DiscordWebhook(url=DISCORD_WEBHOOK_URL, content=content)
             response = webhook.execute()
     cursor.close()
     

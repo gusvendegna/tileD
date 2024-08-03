@@ -88,9 +88,9 @@
                 <button type="submit">Create Alert</button>
             </form>
         </section>
-        <section class="alerts-list">
+        <section class="device-list">
             <h2>Current Devices</h2>
-            <ul id="alerts">
+            <ul id="devices">
                 {% for device in devices %}
                 <li value="{{ device.uuid }}">
                     <strong>{{ device.name }}</strong><br>
